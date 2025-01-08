@@ -1,9 +1,15 @@
-mobilePrice = 15000;
-walletBalance = 5000;
+const texRate = .08;
+const phonePrice = 10000;
+const accessoryPrice = 500;
+const spendingThreshold = 1000;
 
-if (price <= walletBalance) {
-    console.log("buy");
+let bankAccountBalance = 30000;
+
+
+function calculateTax(price, taxRate) {
+    return price * taxRate;
 }
-else {
-    console.log("can't afford");
-}
+
+const tax = calculateTax(phonePrice, texRate);
+
+console.log(tax);
