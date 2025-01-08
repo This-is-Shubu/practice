@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p::before {
+            content: "Note: ";
+            color: red;
+            font-weight: bold;
+        }
+
+        p::after {
+            content: " - Thank you!";
+            color: blue;
+            font-weight: bold;
+        }
+
+        p::first-letter {
+            font-size: 2em;
+            color: green;
+            font-weight: bold;
+        }
+
+        p::first-line {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        ::selection {
+            background: rgb(255, 0, 72);
+            color: black;
+        }
+    </style>
+    <title>Pseudo-elements Example</title>
+</head>
+
+<body>
+    <p>This is a paragraph demonstrating the use of pseudo-elements. Select this text to see the selection
+        pseudo-element in action.</p>
+</body>
+
+</html>
