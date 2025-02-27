@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pagination Example</title>
+		<style>
+			.pagination {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				list-style-type: none;
+			}
+			.pagination li {
+				margin: 0 5px;
+				cursor: pointer;
+			}
+			.pagination .active {
+				font-weight: bold;
+			}
+			.pagination .dots {
+				pointer-events: none;
+			}
+		</style>
+	</head>
+	<body>
+		<footer>
+			<ul class="pagination" id="pagination"></ul>
+			<ul class="pagination" id="pagination"></ul>
+			<ul class="pagination" id="pagination"></ul>
+			<!-- checking  -->
+			<ul class="pagination" id="pagination"></ul>
+			<ul class="pagination" id="pagination"></ul>
+		</footer>
+
+		<script src="js1.js"></script>
+	</body>
+</html>
