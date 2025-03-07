@@ -77,16 +77,9 @@ a = - (b - a);
 
 // task6: write a program that converts a number into a string and vice versa
 
+const input = prompt("Enter a value:");
 function checkInput() {
     input = prompt("enter anything")
-    input
-    if (typeof input == "String") {
-        console.log("this is string");
-
-    } else if (typeof input == Number) {
-        console.log("this is number");
-
-    }
-
-
+    num = Number(input);
+    num == !NaN ? console.log(`this is ${typeof num}`) : console.log(`this is not a number`);
 }
