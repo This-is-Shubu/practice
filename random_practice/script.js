@@ -76,10 +76,34 @@ a = - (b - a);
 } */
 
 // task6: write a program that converts a number into a string and vice versa
+//  part-1: which checks if entered value is string or number
+/* const input = prompt("enter any number")
 
-const input = prompt("Enter a value:");
-function checkInput() {
-    input = prompt("enter anything")
-    num = Number(input);
-    num == !NaN ? console.log(`this is ${typeof num}`) : console.log(`this is not a number`);
+const value = isNaN(input) && input.trim() !== "" ? input : Number(input);
+
+console.log(typeof value); */
+
+// part-2 converts the value into a string or vice versa
+
+const input = prompt("enter anything")
+if (input === null || input === "") {
+    console.log("input is empty");
 }
+else {
+    let value;
+    if (!isNaN(input)) { value = Number(input) }
+    else if (/[a-zA-Z]/.test(input) && /[0-9]/.test(input)) {
+        value = "invalid input";
+    } else {
+        value = String(input);
+    }
+
+    if (typeof value == "number") {
+        console.log(`${value} converted into string`)
+    } else if (value == "invalid input") {
+        console.log(`${value} cannot be converted into string or number`);
+    } else {
+        console.log(`${value} converted into number`)
+    };
+}
+
