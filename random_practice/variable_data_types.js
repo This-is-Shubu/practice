@@ -85,7 +85,7 @@ console.log(typeof value); */
 
 // part-2 converts the value into a string or vice versa
 
-const input = prompt("enter anything")
+/* const input = prompt("enter anything")
 if (input === null || input === "") {
     console.log("input is empty");
 }
@@ -106,4 +106,4 @@ else {
         console.log(`${value} converted into number`)
     };
 }
-
+ */
