@@ -3,13 +3,16 @@ const input1 = document.getElementById("fNum");
 const input2 = document.getElementById("sNum");
 const input3 = document.getElementById("tNum");
 const button = document.getElementById("submit");
-const inputs = [input1, input2, input3];
+
 const resultHold = document.createElement("p")
 
 // const result = document.createTextNode("")
-const result = Math.max(inputs);
+// const result = Math.max(inputs);
 
-button.addEventListener("click", () => { resultHold.appendChild(result); }
+button.addEventListener("click", () => {
+    const inputs = [input1.value, input2.value, input3.value];
+    console.log(inputs);
 
-)
+
+})
 
