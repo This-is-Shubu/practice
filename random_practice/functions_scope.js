@@ -21,20 +21,20 @@ form.addEventListener("submit", (e) => {
 // task2: Implement a function that counts the number of vowels in a string.
 
 const input = document.getElementById("paraInput")
-const btn = document.getElementById("submit")
-let count = 0;
+const btn = document.getElementById("submit1")
+
 
 function counter() {
+    let count = 0;
+    console.log(input.value);
     for (i = 0; i < input.value.length; i++) {
+
         if (/[aeiou]/i.test(input.value[i])) {
             count++;
         }
     }
-    return console.log(count);
+    console.log(count);
 }
 
-btn.addEventListener("click", () => {
-    counter();
-    ;
-})
+btn.addEventListener("click", counter)
 
