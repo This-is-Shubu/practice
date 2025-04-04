@@ -38,3 +38,5 @@ function counter() {
 
 btn.addEventListener("click", counter)
 
+// task3: Create a function that takes a number and returns true if it's a prime number
+
