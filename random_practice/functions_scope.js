@@ -22,11 +22,11 @@ form.addEventListener("submit", (e) => {
 
 const input = document.getElementById("paraInput")
 const btn = document.getElementById("submit1")
+const print = document.getElementById("p1")
 
 
 function counter() {
     let count = 0;
-    console.log(input.value);
     for (i = 0; i < input.value.length; i++) {
 
         if (/[aeiou]/i.test(input.value[i])) {
@@ -34,9 +34,10 @@ function counter() {
         }
     }
     console.log(count);
+    print.querySelector("#result1").textContent = count;
 }
 
-btn.addEventListener("click", counter)
-
-// task3: Create a function that takes a number and returns true if it's a prime number
+btn.addEventListener("click", () => {
+    counter();
+})
 
