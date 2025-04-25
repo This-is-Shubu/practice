@@ -2,7 +2,7 @@
 const input1_1 = document.getElementById("fNum1");
 const input1_2 = document.getElementById("sNum1");
 const input1_3 = document.getElementById("tNum1");
-const resultHold = document.getElementById("p1")
+const print1 = document.getElementById("p1")
 const form = document.getElementById("form1")
 
 
@@ -13,7 +13,7 @@ form.addEventListener("submit", (e) => {
 
     const result = Math.max(input1_1.value, input1_2.value, input1_3.value);
     console.log(result);
-    resultHold.querySelector("#result1").textContent = result;
+    print1.querySelector("#result1").textContent = result;
 })
 
 
@@ -21,7 +21,7 @@ form.addEventListener("submit", (e) => {
 
 const input = document.getElementById("textArea2")
 const btn2 = document.getElementById("submit2")
-const print = document.getElementById("p2")
+const print2 = document.getElementById("p2")
 
 
 function counter() {
@@ -33,7 +33,7 @@ function counter() {
         }
     }
     console.log(count);
-    print.querySelector("#result2").textContent = count;
+    print2.querySelector("#result2").textContent = count;
 }
 
 btn2.addEventListener("click", () => {
@@ -43,17 +43,24 @@ btn2.addEventListener("click", () => {
 // task3: Create a function that takes a number and returns true if it's a prime number.
 
 const input3 = document.getElementById("input3")
-const btn3 =
+const btn3 = document.getElementById("submit3")
+const result3 = document.getElementById("p3").querySelector("#result3")
 
-    function isPrime() {
-        if (input3 <= 1) return false;
-        if (input3 <= 3) return true;
+function isPrime(num) {
+    num = Number(num);
+    if (isNaN(num)) return false;
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+    if (num % 2 === 0 || num % 3 === 0) return false;
 
-        if (input3 % 2 === 0 || input3 % 3 === 0) return false;
-
-        for (let i = 5; i * i <= input3; i += 6) {
-            if (input3 % i === 0 || input3 % (i + 2) === 0) return false;
-        }
-        return true;
+    for (let i = 5; i * i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0) return false;
     }
+    return true;
+}
 
+btn3.addEventListener("click", () => {
+    const num = input3.value;
+    const primeCheck = isPrime(num);
+    result3.textContent = primeCheck;
+})
