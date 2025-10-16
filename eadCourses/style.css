@@ -1,4 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	/* border: 1px solid red; */
+}
 body {
 	background-color: #212121;
 	color: #fff;
+}
+
+nav {
+	width: 80%;
+	height: 50px;
+	margin: auto;
+	padding: 10px;
+	display: flex;
+	background-color: #333;
+	justify-content: space-between;
+	gap: 100px;
+	align-items: center;
+}
+
+img {
+	width: 70px;
+	justify-content: center;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	gap: 15px;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
 }
